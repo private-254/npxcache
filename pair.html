@@ -20,13 +20,13 @@
       --primary-dark: #3A56D4;
       --secondary: #10A37F;
       --accent: #7C3AED;
-      
+
       /* Replit Theme Colors */
       --replit-dark: #0E1525;
       --replit-darker: #0B111E;
       --replit-card: #1C2333;
       --replit-border: #2B3347;
-      
+
       /* UI Colors */
       --dark: #0E1525;
       --darker: #0B111E;
@@ -37,12 +37,12 @@
       --success: #10A37F;
       --warning: #F59E0B;
       --error: #EF4444;
-      
+
       --transition: all 0.2s ease;
       --rain: rgba(75, 107, 251, 0.2);
       --bg-gradient: linear-gradient(135deg, #0B111E 0%, #1C2333 100%);
     }
-    
+
     * { 
       margin: 0; 
       padding: 0; 
@@ -50,7 +50,7 @@
       font-family: 'Inter', sans-serif; 
       transition: var(--transition); 
     }
-    
+
     body {
       background: var(--bg-gradient);
       color: var(--light);
@@ -60,7 +60,7 @@
       position: relative;
       overflow-x: hidden;
     }
-    
+
     /* Animations and effects */
     body::before, body::after {
       content: '';
@@ -75,12 +75,12 @@
     body::after { animation-delay: 3s; }
     body::before { left: 0; }
     body::after { right: 0; }
-    
+
     @keyframes slideDown { 
       0% { transform: translateY(-100%); } 
       100% { transform: translateY(100%); } 
     }
-    
+
     #rain-canvas, #particles-js {
       position: fixed; 
       top: 0; 
@@ -90,7 +90,7 @@
       z-index: 0; 
       pointer-events: none;
     }
-    
+
     .cloud {
       position: fixed;
       border-radius: 50%;
@@ -102,13 +102,13 @@
     .cloud-1 { width: 500px; height: 150px; top: 20px; left: -50px; animation: driftCloud 40s linear infinite; }
     .cloud-2 { width: 600px; height: 180px; top: 60px; right: -100px; animation: driftCloud 55s linear infinite reverse; }
     .cloud-3 { width: 450px; height: 130px; top: 10px; left: 30%; animation: driftCloud 45s 10s linear infinite; }
-    
+
     @keyframes driftCloud { 
       0% { transform: translateX(-10%); } 
       50% { transform: translateX(10%); } 
       100% { transform: translateX(-10%); } 
     }
-    
+
     /* Navbar */
     .navbar {
       background: rgba(11, 17, 30, 0.95);
@@ -120,7 +120,7 @@
       z-index: 1000;
       border-bottom: 1px solid var(--replit-border);
     }
-    
+
     .navbar-container {
       max-width: 1200px; 
       margin: 0 auto;
@@ -128,7 +128,7 @@
       justify-content: space-between; 
       align-items: center;
     }
-    
+
     .logo { 
       color: var(--light); 
       text-decoration: none; 
@@ -139,25 +139,25 @@
       gap: 0.75rem;
       letter-spacing: -0.5px;
     }
-    
+
     .logo i { 
       color: var(--primary); 
       animation: pulse 2s infinite; 
     }
-    
+
     .logo span {
       background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    
-    /* Social icons - Updated with correct username */
+
+    /* Social icons */
     .social-icons {
       display: flex;
       gap: 1rem;
     }
-    
+
     .social-icons a {
       display: flex;
       align-items: center;
@@ -172,7 +172,7 @@
       transition: var(--transition);
       border: 1px solid var(--replit-border);
     }
-    
+
     .social-icons a:hover {
       background: var(--primary);
       color: white;
@@ -187,7 +187,7 @@
       position: relative;
       z-index: 1;
     }
-    
+
     .hero h1 {
       font-size: 3.5rem;
       font-weight: 700;
@@ -198,7 +198,7 @@
       color: transparent;
       margin-bottom: 1rem;
     }
-    
+
     .typing-text {
       display: inline-block; 
       overflow: hidden; 
@@ -224,7 +224,7 @@
       color: var(--primary);
       z-index: 1;
     }
-    
+
     .live-timer i {
       color: var(--secondary);
       animation: pulse 2s infinite;
@@ -237,7 +237,7 @@
       position: relative;
       z-index: 1;
     }
-    
+
     .pair-card {
       max-width: 480px; 
       margin: 0 auto;
@@ -248,7 +248,7 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(10px);
     }
-    
+
     .pair-card h2 {
       text-align: center; 
       color: var(--light);
@@ -256,18 +256,18 @@
       font-size: 1.8rem;
       font-weight: 600;
     }
-    
+
     .pair-card h2 span {
       color: var(--primary);
     }
-    
+
     .pair-card p {
       color: var(--text-secondary);
       text-align: center; 
       margin-bottom: 2rem;
       font-size: 0.95rem;
     }
-    
+
     .pair-card label {
       display: block; 
       color: var(--light);
@@ -275,7 +275,7 @@
       font-weight: 500;
       font-size: 0.9rem;
     }
-    
+
     .pair-card input[type="text"] {
       width: 100%; 
       padding: 1rem;
@@ -286,19 +286,19 @@
       margin-bottom: 1.5rem;
       font-size: 1rem;
     }
-    
+
     .pair-card input[type="text"]:focus {
       outline: none;
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(77, 107, 254, 0.1);
     }
-    
+
     .button-group { 
       display: flex; 
       gap: 0.75rem; 
       margin-bottom: 1rem; 
     }
-    
+
     .btn {
       flex: 1; 
       padding: 1rem;
@@ -311,19 +311,19 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    
+
     .btn:hover { 
       background: var(--primary-dark);
       transform: translateY(-2px); 
       box-shadow: 0 8px 20px rgba(77, 107, 254, 0.3);
     }
-    
+
     .btn-secondary {
       background: transparent; 
       color: var(--primary); 
       border: 2px solid var(--primary);
     }
-    
+
     .btn-secondary:hover { 
       background: rgba(77, 107, 254, 0.1);
       color: var(--primary-light);
@@ -338,7 +338,7 @@
       position: relative;
       z-index: 1;
     }
-    
+
     .deployment-section h2 {
       text-align: center;
       font-size: 2.5rem;
@@ -349,19 +349,19 @@
       background-clip: text;
       color: transparent;
     }
-    
+
     .deployment-section p {
       text-align: center;
       color: var(--text-secondary);
       margin-bottom: 3rem;
     }
-    
+
     .deployment-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
-    
+
     .deploy-card {
       background: var(--replit-card);
       border: 1px solid var(--replit-border);
@@ -370,13 +370,13 @@
       transition: all 0.3s ease;
       text-align: center;
     }
-    
+
     .deploy-card:hover {
       transform: translateY(-8px);
       border-color: var(--primary);
       box-shadow: 0 20px 40px rgba(77, 107, 254, 0.2);
     }
-    
+
     .deploy-card h3 {
       color: var(--light);
       font-size: 1.3rem;
@@ -386,46 +386,65 @@
       justify-content: center;
       gap: 10px;
     }
-    
+
     .deploy-card h3 i {
       color: var(--primary);
     }
-    
+
     .deploy-btn {
       display: inline-block;
       width: 100%;
       text-decoration: none;
     }
-    
+
     .deploy-btn img {
       width: 100%;
       height: auto;
       border-radius: 12px;
       transition: transform 0.2s;
     }
-    
+
     .deploy-btn:hover img {
       transform: scale(1.02);
     }
 
-    /* Obfuscator Link */
-    .obfuscator-link {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: rgba(124, 58, 237, 0.1);
-      border-radius: 12px;
+    /* Obfuscator Link - Made more visible */
+    .obfuscator-section {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(77, 107, 254, 0.15) 100%);
+      border-radius: 20px;
       border: 1px solid var(--accent);
       text-align: center;
     }
-    
-    .obfuscator-link a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
+
+    .obfuscator-section h3 {
+      color: var(--light);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
     }
-    
-    .obfuscator-link a:hover {
-      text-decoration: underline;
+
+    .obfuscator-section p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    .obfuscator-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+    }
+
+    .obfuscator-btn:hover {
+      background: #8B5CF6;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
     }
 
     /* Tutorial Section */
@@ -438,18 +457,18 @@
       max-width: 1200px;
       width: 90%;
     }
-    
+
     .tutorial-section h3 {
       font-size: 2rem;
       color: var(--light);
       margin-bottom: 1rem;
     }
-    
+
     .tutorial-section p {
       color: var(--text-secondary);
       margin-bottom: 2rem;
     }
-    
+
     .youtube-btn {
       display: inline-flex;
       align-items: center;
@@ -463,7 +482,7 @@
       font-weight: 600;
       transition: all 0.3s;
     }
-    
+
     .youtube-btn:hover {
       background: #CC0000;
       transform: translateY(-3px);
@@ -477,7 +496,7 @@
       width: 80px; 
       height: 20px; 
     }
-    
+
     .lds-ellipsis div { 
       position: absolute; 
       top: 8px; 
@@ -487,26 +506,26 @@
       background: var(--primary); 
       animation-timing-function: cubic-bezier(0, 1, 1, 0); 
     }
-    
+
     .lds-ellipsis div:nth-child(1) { left: 8px; animation: lds1 0.6s infinite; }
     .lds-ellipsis div:nth-child(2) { left: 8px; animation: lds2 0.6s infinite; }
     .lds-ellipsis div:nth-child(3) { left: 32px; animation: lds2 0.6s infinite; }
     .lds-ellipsis div:nth-child(4) { left: 56px; animation: lds3 0.6s infinite; }
-    
+
     @keyframes lds1 { 0% { transform: scale(0); } 100% { transform: scale(1); } }
     @keyframes lds3 { 0% { transform: scale(1); } 100% { transform: scale(0); } }
     @keyframes lds2 { 0% { transform: translate(0, 0); } 100% { transform: translate(24px, 0); } }
-    
+
     @keyframes typing { 
       from { width: 0; } 
       to { width: 100%; } 
     }
-    
+
     @keyframes blink-caret { 
       from, to { border-color: transparent; } 
       50% { border-color: var(--primary); } 
     }
-    
+
     @keyframes pulse { 
       0%, 100% { transform: scale(1); } 
       50% { transform: scale(1.1); } 
@@ -524,17 +543,17 @@
       position: relative;
       z-index: 1;
     }
-    
+
     .footer-message {
       max-width: 600px;
       margin: 0 auto 2rem;
       line-height: 1.6;
     }
-    
+
     .footer-message i {
       color: var(--primary);
     }
-    
+
     .footer-movies-link {
       display: inline-block;
       background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
@@ -546,17 +565,17 @@
       margin-bottom: 2rem;
       border: 1px solid rgba(255, 255, 255, 0.2);
     }
-    
+
     .footer-movies-link:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba(77, 107, 254, 0.4);
     }
-    
+
     .footer-copyright {
       border-top: 1px solid var(--replit-border);
       padding-top: 2rem;
     }
-    
+
     .footer-copyright span {
       color: var(--primary);
       font-weight: 600;
@@ -578,7 +597,7 @@
       border: 1px solid var(--secondary);
       border-radius: 16px;
     }
-    
+
     #session-id-box {
       background: var(--replit-darker);
       border: 1px solid var(--replit-border);
@@ -592,6 +611,18 @@
       overflow-y: auto;
       margin-bottom: 1rem;
     }
+
+    /* Small badges for pair links */
+    .badge-link {
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+    
+    .badge-link img {
+      height: 28px;
+      width: auto;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
@@ -601,12 +632,12 @@
   <div class="cloud cloud-3"></div>
   <canvas id="rain-canvas"></canvas>
   <div id="particles-js"></div>
-  
+
   <!-- Background music -->
   <audio id="bg-music" loop>
     <source src="https://files.catbox.moe/nltrjp.mp3" type="audio/mpeg">
   </audio>
-  
+
   <header class="navbar">
     <div class="navbar-container">
       <a href="#" class="logo">
@@ -629,7 +660,7 @@
       </div>
     </div>
   </header>  
-  
+
   <section class="hero">
     <h1>DAVE X PAIR CODE</h1>
     <div class="typing-text">Connect to my bits instantly!</div>
@@ -637,13 +668,21 @@
       <i class="fas fa-clock"></i>
       <span id="live-uptime">0d 0h 0m 0s</span>
     </div>
+    <div style="margin-top: 2rem;">
+      <a href="https://github.com/DaveTech-Incr/DAVE-X/fork" class="badge-link">
+        <img src="https://img.shields.io/badge/Fork_Repo-2ea44f?style=flat-square&logo=github" alt="Fork Repo">
+      </a>
+      <a href="http://davexultra.zone.id/" class="badge-link">
+        <img src="https://img.shields.io/badge/Get_Pair_Code-4D6BFE?style=flat-square&logo=whatsapp" alt="Get Pair Code">
+      </a>
+    </div>
   </section>
-  
+
   <section class="pair-section">
     <div class="pair-card">
       <h2>Get Your <span>Pair Code</span></h2>
       <p>Enter your WhatsApp number with country code to get your pairing code and link.</p>
-      
+
       <label for="phone-number">Phone Number</label>
       <input type="text" id="phone-number" placeholder="e.g., +254XXXXXXXXX">
 
@@ -656,9 +695,9 @@
         <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
         <p style="color: var(--text-secondary); margin-top: 1rem;">Generating your code...</p>
       </div>
-      
+
       <div id="pair"></div>
-      
+
       <button class="btn" id="copy-code" style="display: none;">Copy Code</button>
 
       <div id="session-result" style="display: none;">
@@ -682,7 +721,7 @@
   <section class="deployment-section">
     <h2>📡 DEPLOYMENT SITES</h2>
     <p>Deploy your <strong>DAVE-X Bot</strong> with one click on your favorite hosting platforms.</p>
-    
+
     <div class="deployment-grid">
       <!-- Heroku -->
       <div class="deploy-card">
@@ -691,7 +730,7 @@
           <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Deploy to Heroku">
         </a>
       </div>
-      
+
       <!-- Replit -->
       <div class="deploy-card">
         <h3><i class="fas fa-code"></i> Replit</h3>
@@ -699,7 +738,7 @@
           <img src="https://img.shields.io/badge/Replit-F26207?style=for-the-badge&logo=replit&logoColor=white&labelColor=000000" alt="Deploy to Replit">
         </a>
       </div>
-      
+
       <!-- Koyeb -->
       <div class="deploy-card">
         <h3><i class="fas fa-globe"></i> Koyeb</h3>
@@ -707,7 +746,7 @@
           <img src="https://img.shields.io/badge/Koyeb-FF009D?style=for-the-badge&logo=koyeb&logoColor=white&labelColor=000000" alt="Deploy to Koyeb">
         </a>
       </div>
-      
+
       <!-- Railway -->
       <div class="deploy-card">
         <h3><i class="fas fa-train"></i> Railway</h3>
@@ -715,7 +754,7 @@
           <img src="https://img.shields.io/badge/Railway-FF8700?style=for-the-badge&logo=railway&logoColor=white&labelColor=000000" alt="Deploy to Railway">
         </a>
       </div>
-      
+
       <!-- Render -->
       <div class="deploy-card">
         <h3><i class="fas fa-server"></i> Render</h3>
@@ -723,7 +762,7 @@
           <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white&labelColor=000000&color=007FFF" alt="Deploy to Render">
         </a>
       </div>
-      
+
       <!-- Netlify -->
       <div class="deploy-card">
         <h3><i class="fas fa-cloud"></i> Netlify</h3>
@@ -731,7 +770,7 @@
           <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white&labelColor=000000" alt="Deploy to Netlify">
         </a>
       </div>
-      
+
       <!-- Katabump -->
       <div class="deploy-card">
         <h3><i class="fas fa-cloudflare"></i> Katabump</h3>
@@ -739,7 +778,7 @@
           <img src="https://img.shields.io/badge/Katabump-FF6B6B?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Deploy to Katabump">
         </a>
       </div>
-      
+
       <!-- Download -->
       <div class="deploy-card">
         <h3><i class="fas fa-download"></i> Download</h3>
@@ -749,9 +788,13 @@
       </div>
     </div>
 
-    <!-- Obfuscator Link -->
-    <div class="obfuscator-link">
-      <p>🔒 Need to obfuscate your code? Visit: <a href="https://davexpremobfuscator.zone.id/" target="_blank">DAVEX Obfuscator</a></p>
+    <!-- Obfuscator Section - Now more visible -->
+    <div class="obfuscator-section">
+      <h3>🔒 DAVEX Obfuscator</h3>
+      <p>Protect your code with our professional obfuscation tool</p>
+      <a href="https://davexpremobfuscator.zone.id/" target="_blank" class="obfuscator-btn">
+        <i class="fas fa-shield-alt"></i> Visit Obfuscator
+      </a>
     </div>
   </section>
 
@@ -763,21 +806,21 @@
       <i class="fab fa-youtube"></i> ▶️ Click Here to Watch
     </a>
   </section>
-  
+
   <footer>
     <div class="footer-message">
       <i class="fas fa-heart" style="color: var(--primary);"></i> Built with passion by Dave Tech. Enjoying the bot? Check out my movies site for entertainment!
     </div>
-    
+
     <a href="https://www.davex-moviezone.zone.id/" target="_blank" class="footer-movies-link">
       <i class="fas fa-film"></i> DAVEXMOVIES - Stream Movies & TV Shows
     </a>
-    
+
     <div class="footer-copyright">
       © <span id="currentYear"></span> <span>DAVE X</span> • All rights reserved
     </div>
   </footer>  
-  
+
   <script>
     // Keep all your original JavaScript exactly as it was
     const rainCanvas = document.getElementById('rain-canvas');
@@ -847,7 +890,7 @@
       const elapsed = Date.now() - serverStartTime;
       liveUptime.textContent = formatUptime(elapsed);
     }
-    
+
     setInterval(tickUptime, 1000);
 
     // Pair code functionality
@@ -960,7 +1003,7 @@
     });
 
     valBtn.addEventListener('click', () => window.location.href='/validate');
-    
+
     phoneInput.addEventListener('input', function(){ 
       let v = this.value.replace(/\D/g,''); 
       this.value = v ? '+'+v : ''; 
