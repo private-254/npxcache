@@ -152,7 +152,7 @@
       color: transparent;
     }
     
-    /* Social icons */
+    /* Social icons - Updated with correct username */
     .social-icons {
       display: flex;
       gap: 1rem;
@@ -408,52 +408,24 @@
       transform: scale(1.02);
     }
 
-    /* Movies Banner */
-    .movies-banner {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent) 100%);
-      border-radius: 30px;
-      padding: 3rem;
-      margin-top: 4rem;
+    /* Obfuscator Link */
+    .obfuscator-link {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: rgba(124, 58, 237, 0.1);
+      border-radius: 12px;
+      border: 1px solid var(--accent);
       text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .movies-banner h3 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      color: white;
-    }
-    
-    .movies-banner p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: rgba(255, 255, 255, 0.9);
-    }
-    
-    .movies-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
-      padding: 1.2rem 2.5rem;
-      border-radius: 60px;
-      color: white;
+    .obfuscator-link a {
+      color: var(--accent);
       text-decoration: none;
-      font-size: 1.3rem;
       font-weight: 600;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s;
     }
     
-    .movies-link:hover {
-      background: rgba(0, 0, 0, 0.5);
-      border-color: white;
-      transform: scale(1.05);
-    }
-    
-    .movies-link i {
-      font-size: 1.8rem;
+    .obfuscator-link a:hover {
+      text-decoration: underline;
     }
 
     /* Tutorial Section */
@@ -462,7 +434,9 @@
       padding: 3rem 2rem;
       background: var(--replit-darker);
       border-radius: 30px;
-      margin-top: 4rem;
+      margin: 0 auto 4rem;
+      max-width: 1200px;
+      width: 90%;
     }
     
     .tutorial-section h3 {
@@ -494,25 +468,6 @@
       background: #CC0000;
       transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
-    }
-
-    /* Obfuscator Link */
-    .obfuscator-link {
-      margin-top: 2rem;
-      padding: 1rem;
-      background: rgba(124, 58, 237, 0.1);
-      border-radius: 12px;
-      border: 1px solid var(--accent);
-    }
-    
-    .obfuscator-link a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    
-    .obfuscator-link a:hover {
-      text-decoration: underline;
     }
 
     /* Loading Animation */
@@ -613,8 +568,6 @@
       .deployment-grid { grid-template-columns: 1fr; }
       .navbar-container { flex-direction: column; gap: 1rem; }
       .social-icons { margin-top: 0.5rem; }
-      .movies-banner { padding: 2rem; }
-      .movies-banner h3 { font-size: 1.8rem; }
     }
 
     /* Session Result Styles */
@@ -667,10 +620,10 @@
         <a href="https://t.me/Digladoo" target="_blank" title="Telegram">
           <i class="fab fa-telegram-plane"></i>
         </a>
-        <a href="https://github.com/Davex-254" target="_blank" title="GitHub">
+        <a href="https://github.com/DaveTech-Incr" target="_blank" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
-        <a href="https://replit.com/@DaveTech" target="_blank" title="Replit">
+        <a href="https://replit.com/@DaveTech-Incr" target="_blank" title="Replit">
           <i class="fas fa-code"></i>
         </a>
       </div>
@@ -734,7 +687,7 @@
       <!-- Heroku -->
       <div class="deploy-card">
         <h3><i class="fab fa-heroku"></i> Heroku</h3>
-        <a href="https://dashboard.heroku.com/new?template=https://github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+        <a href="https://dashboard.heroku.com/new?template=https://github.com/DaveTech-Incr/DAVE-X" target="_blank" class="deploy-btn">
           <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Deploy to Heroku">
         </a>
       </div>
@@ -742,7 +695,7 @@
       <!-- Replit -->
       <div class="deploy-card">
         <h3><i class="fas fa-code"></i> Replit</h3>
-        <a href="https://replit.com/github/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+        <a href="https://replit.com/github/DaveTech-Incr/DAVE-X" target="_blank" class="deploy-btn">
           <img src="https://img.shields.io/badge/Replit-F26207?style=for-the-badge&logo=replit&logoColor=white&labelColor=000000" alt="Deploy to Replit">
         </a>
       </div>
@@ -750,7 +703,7 @@
       <!-- Koyeb -->
       <div class="deploy-card">
         <h3><i class="fas fa-globe"></i> Koyeb</h3>
-        <a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+        <a href="https://app.koyeb.com/deploy?type=git&repository=github.com/DaveTech-Incr/DAVE-X" target="_blank" class="deploy-btn">
           <img src="https://img.shields.io/badge/Koyeb-FF009D?style=for-the-badge&logo=koyeb&logoColor=white&labelColor=000000" alt="Deploy to Koyeb">
         </a>
       </div>
@@ -758,7 +711,7 @@
       <!-- Railway -->
       <div class="deploy-card">
         <h3><i class="fas fa-train"></i> Railway</h3>
-        <a href="https://railway.app/new/template?template=https://github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+        <a href="https://railway.app/new/template?template=https://github.com/DaveTech-Incr/DAVE-X" target="_blank" class="deploy-btn">
           <img src="https://img.shields.io/badge/Railway-FF8700?style=for-the-badge&logo=railway&logoColor=white&labelColor=000000" alt="Deploy to Railway">
         </a>
       </div>
@@ -766,7 +719,7 @@
       <!-- Render -->
       <div class="deploy-card">
         <h3><i class="fas fa-server"></i> Render</h3>
-        <a href="https://render.com/deploy?repo=https://github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+        <a href="https://render.com/deploy?repo=https://github.com/DaveTech-Incr/DAVE-X" target="_blank" class="deploy-btn">
           <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white&labelColor=000000&color=007FFF" alt="Deploy to Render">
         </a>
       </div>
@@ -774,7 +727,7 @@
       <!-- Netlify -->
       <div class="deploy-card">
         <h3><i class="fas fa-cloud"></i> Netlify</h3>
-        <a href="https://app.netlify.com/start/deploy?repository=https://github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+        <a href="https://app.netlify.com/start/deploy?repository=https://github.com/DaveTech-Incr/DAVE-X" target="_blank" class="deploy-btn">
           <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white&labelColor=000000" alt="Deploy to Netlify">
         </a>
       </div>
@@ -790,7 +743,7 @@
       <!-- Download -->
       <div class="deploy-card">
         <h3><i class="fas fa-download"></i> Download</h3>
-        <a href="https://github.com/Davex-254/DAVE-X/archive/refs/heads/main.zip" target="_blank" class="deploy-btn">
+        <a href="https://github.com/DaveTech-Incr/DAVE-X/archive/refs/heads/main.zip" target="_blank" class="deploy-btn">
           <img src="https://img.shields.io/badge/Download-ZIP-10A37F?style=for-the-badge&logo=github&logoColor=white" alt="Download ZIP">
         </a>
       </div>
@@ -803,7 +756,7 @@
   </section>
 
   <!-- Tutorial Section -->
-  <section class="tutorial-section" style="max-width: 1200px; margin: 0 auto 4rem; width: 90%;">
+  <section class="tutorial-section">
     <h3>🎥 WATCH TUTORIAL</h3>
     <p>How to deploy DAVE-X on panel in 2026 - Step-by-step video guide</p>
     <a href="https://youtu.be/wJKMV0BSqpE?si=6Y11rPD0t2ykoxB8" target="_blank" class="youtube-btn">
@@ -827,7 +780,6 @@
   
   <script>
     // Keep all your original JavaScript exactly as it was
-    // Rain canvas
     const rainCanvas = document.getElementById('rain-canvas');
     const rCtx = rainCanvas.getContext('2d');
     let rainDrops = [];
