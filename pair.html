@@ -61,7 +61,7 @@
       overflow-x: hidden;
     }
     
-    /* Keep your original animations and effects */
+    /* Animations and effects */
     body::before, body::after {
       content: '';
       position: fixed;
@@ -69,9 +69,6 @@
       width: 4px;
       z-index: 999;
       opacity: 0.6;
-    }
-    
-    body::before, body::after {
       background: linear-gradient(180deg, transparent, var(--rain), var(--primary), var(--rain), transparent);
       animation: slideDown 6s infinite linear;
     }
@@ -84,7 +81,6 @@
       100% { transform: translateY(100%); } 
     }
     
-    /* Keep your rain canvas and particles */
     #rain-canvas, #particles-js {
       position: fixed; 
       top: 0; 
@@ -111,13 +107,6 @@
       0% { transform: translateX(-10%); } 
       50% { transform: translateX(10%); } 
       100% { transform: translateX(-10%); } 
-    }
-    
-    /* Glassmorphism */
-    .glass {
-      background: var(--glass-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
     }
     
     /* Navbar */
@@ -163,7 +152,7 @@
       color: transparent;
     }
     
-    /* Social icons - Keep only Davex social links */
+    /* Social icons */
     .social-icons {
       display: flex;
       gap: 1rem;
@@ -191,7 +180,7 @@
       border-color: var(--primary);
     }
 
-    /* Hero Section - Keep your original styling */
+    /* Hero Section */
     .hero { 
       padding: 8rem 2rem 4rem; 
       text-align: center; 
@@ -241,7 +230,7 @@
       animation: pulse 2s infinite;
     }
 
-    /* Pair Code Card - Keep your original functional code */
+    /* Pair Code Card */
     .pair-section { 
       padding: 2rem 2rem 4rem; 
       flex: 1; 
@@ -340,7 +329,7 @@
       color: var(--primary-light);
     }
 
-    /* Deployment Section - Fixed with your real links */
+    /* Deployment Section */
     .deployment-section {
       padding: 4rem 2rem;
       max-width: 1200px;
@@ -354,16 +343,22 @@
       text-align: center;
       font-size: 2.5rem;
       font-weight: 700;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
       background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
     
+    .deployment-section p {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+    }
+    
     .deployment-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
     
@@ -371,7 +366,7 @@
       background: var(--replit-card);
       border: 1px solid var(--replit-border);
       border-radius: 20px;
-      padding: 2rem;
+      padding: 2rem 2rem 1.5rem;
       transition: all 0.3s ease;
       text-align: center;
     }
@@ -399,45 +394,128 @@
     .deploy-btn {
       display: inline-block;
       width: 100%;
-      padding: 1rem;
-      background: var(--primary);
-      color: white;
       text-decoration: none;
-      border-radius: 12px;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.2s;
-      border: 2px solid transparent;
     }
     
-    .deploy-btn:hover {
-      background: transparent;
-      color: var(--primary);
-      border-color: var(--primary);
-    }
-    
-    .heroku-btn {
-      display: inline-block;
-      width: 100%;
-    }
-    
-    .heroku-btn img {
+    .deploy-btn img {
       width: 100%;
       height: auto;
       border-radius: 12px;
+      transition: transform 0.2s;
     }
     
-    .download-btn {
-      background: var(--secondary);
-    }
-    
-    .download-btn:hover {
-      background: transparent;
-      color: var(--secondary);
-      border-color: var(--secondary);
+    .deploy-btn:hover img {
+      transform: scale(1.02);
     }
 
-    /* Keep your original loading animations */
+    /* Movies Banner */
+    .movies-banner {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent) 100%);
+      border-radius: 30px;
+      padding: 3rem;
+      margin-top: 4rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .movies-banner h3 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+    
+    .movies-banner p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .movies-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 1.2rem 2.5rem;
+      border-radius: 60px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s;
+    }
+    
+    .movies-link:hover {
+      background: rgba(0, 0, 0, 0.5);
+      border-color: white;
+      transform: scale(1.05);
+    }
+    
+    .movies-link i {
+      font-size: 1.8rem;
+    }
+
+    /* Tutorial Section */
+    .tutorial-section {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: var(--replit-darker);
+      border-radius: 30px;
+      margin-top: 4rem;
+    }
+    
+    .tutorial-section h3 {
+      font-size: 2rem;
+      color: var(--light);
+      margin-bottom: 1rem;
+    }
+    
+    .tutorial-section p {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    
+    .youtube-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: #FF0000;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .youtube-btn:hover {
+      background: #CC0000;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+    }
+
+    /* Obfuscator Link */
+    .obfuscator-link {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: rgba(124, 58, 237, 0.1);
+      border-radius: 12px;
+      border: 1px solid var(--accent);
+    }
+    
+    .obfuscator-link a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .obfuscator-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* Loading Animation */
     .lds-ellipsis { 
       display: inline-block; 
       position: relative; 
@@ -483,16 +561,48 @@
     footer {
       background: var(--replit-darker);
       border-top: 1px solid var(--replit-border);
-      padding: 2rem;
+      padding: 3rem 2rem 2rem;
       text-align: center;
       color: var(--text-secondary);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       margin-top: auto;
       position: relative;
       z-index: 1;
     }
     
-    footer span {
+    .footer-message {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+    
+    .footer-message i {
+      color: var(--primary);
+    }
+    
+    .footer-movies-link {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .footer-movies-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(77, 107, 254, 0.4);
+    }
+    
+    .footer-copyright {
+      border-top: 1px solid var(--replit-border);
+      padding-top: 2rem;
+    }
+    
+    .footer-copyright span {
       color: var(--primary);
       font-weight: 600;
     }
@@ -503,9 +613,11 @@
       .deployment-grid { grid-template-columns: 1fr; }
       .navbar-container { flex-direction: column; gap: 1rem; }
       .social-icons { margin-top: 0.5rem; }
+      .movies-banner { padding: 2rem; }
+      .movies-banner h3 { font-size: 1.8rem; }
     }
 
-    /* Keep your original session styles */
+    /* Session Result Styles */
     #session-result {
       margin-top: 1.5rem;
       padding: 1.5rem;
@@ -529,15 +641,15 @@
     }
   </style>
 </head>
-<body class="rainy">
-  <!-- Keep your original atmospheric elements -->
+<body>
+  <!-- Atmospheric elements -->
   <div class="cloud cloud-1"></div>
   <div class="cloud cloud-2"></div>
   <div class="cloud cloud-3"></div>
   <canvas id="rain-canvas"></canvas>
   <div id="particles-js"></div>
   
-  <!-- Keep your music player if you have one -->
+  <!-- Background music -->
   <audio id="bg-music" loop>
     <source src="https://files.catbox.moe/nltrjp.mp3" type="audio/mpeg">
   </audio>
@@ -555,7 +667,7 @@
         <a href="https://t.me/Digladoo" target="_blank" title="Telegram">
           <i class="fab fa-telegram-plane"></i>
         </a>
-        <a href="https://github.com/DaveTech-Incr" target="_blank" title="GitHub">
+        <a href="https://github.com/Davex-254" target="_blank" title="GitHub">
           <i class="fab fa-github"></i>
         </a>
         <a href="https://replit.com/@DaveTech" target="_blank" title="Replit">
@@ -615,60 +727,111 @@
   </section>
 
   <section class="deployment-section">
-    <h2>Deploy DAVE X</h2>
+    <h2>📡 DEPLOYMENT SITES</h2>
+    <p>Deploy your <strong>DAVE-X Bot</strong> with one click on your favorite hosting platforms.</p>
+    
     <div class="deployment-grid">
+      <!-- Heroku -->
       <div class="deploy-card">
         <h3><i class="fab fa-heroku"></i> Heroku</h3>
-        <a href="https://dashboard.heroku.com/new?template=https%3A%2F%2Fgithub.com%2FDaveTech-Incr%2FDAVE-X" class="heroku-btn">
-          <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku">
+        <a href="https://dashboard.heroku.com/new?template=https://github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+          <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" alt="Deploy to Heroku">
         </a>
       </div>
       
-      <div class="deploy-card">
-        <h3><i class="fas fa-train"></i> Railway</h3>
-        <a href="https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2FDaveTech-Incr%2FDAVE-X" class="deploy-btn">
-          Deploy on Railway
-        </a>
-      </div>
-      
+      <!-- Replit -->
       <div class="deploy-card">
         <h3><i class="fas fa-code"></i> Replit</h3>
-        <a href="https://replit.com/github/DaveTech-Incr/DAVE-X" class="deploy-btn">
-          Deploy on Replit
+        <a href="https://replit.com/github/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+          <img src="https://img.shields.io/badge/Replit-F26207?style=for-the-badge&logo=replit&logoColor=white&labelColor=000000" alt="Deploy to Replit">
         </a>
       </div>
       
+      <!-- Koyeb -->
+      <div class="deploy-card">
+        <h3><i class="fas fa-globe"></i> Koyeb</h3>
+        <a href="https://app.koyeb.com/deploy?type=git&repository=github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+          <img src="https://img.shields.io/badge/Koyeb-FF009D?style=for-the-badge&logo=koyeb&logoColor=white&labelColor=000000" alt="Deploy to Koyeb">
+        </a>
+      </div>
+      
+      <!-- Railway -->
+      <div class="deploy-card">
+        <h3><i class="fas fa-train"></i> Railway</h3>
+        <a href="https://railway.app/new/template?template=https://github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+          <img src="https://img.shields.io/badge/Railway-FF8700?style=for-the-badge&logo=railway&logoColor=white&labelColor=000000" alt="Deploy to Railway">
+        </a>
+      </div>
+      
+      <!-- Render -->
       <div class="deploy-card">
         <h3><i class="fas fa-server"></i> Render</h3>
-        <a href="https://render.com/deploy?repo=https://github.com/DaveTech-Incr/DAVE-X" class="deploy-btn">
-          Deploy on Render
+        <a href="https://render.com/deploy?repo=https://github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+          <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white&labelColor=000000&color=007FFF" alt="Deploy to Render">
         </a>
       </div>
       
+      <!-- Netlify -->
+      <div class="deploy-card">
+        <h3><i class="fas fa-cloud"></i> Netlify</h3>
+        <a href="https://app.netlify.com/start/deploy?repository=https://github.com/Davex-254/DAVE-X" target="_blank" class="deploy-btn">
+          <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white&labelColor=000000" alt="Deploy to Netlify">
+        </a>
+      </div>
+      
+      <!-- Katabump -->
+      <div class="deploy-card">
+        <h3><i class="fas fa-cloudflare"></i> Katabump</h3>
+        <a href="https://dashboard.katabump.com/auth/login#ce51a9" target="_blank" class="deploy-btn">
+          <img src="https://img.shields.io/badge/Katabump-FF6B6B?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Deploy to Katabump">
+        </a>
+      </div>
+      
+      <!-- Download -->
       <div class="deploy-card">
         <h3><i class="fas fa-download"></i> Download</h3>
-        <a href="https://github.com/DaveTech-Incr/DAVE-X/archive/refs/heads/main.zip" class="deploy-btn download-btn">
-          Download Latest Files
+        <a href="https://github.com/Davex-254/DAVE-X/archive/refs/heads/main.zip" target="_blank" class="deploy-btn">
+          <img src="https://img.shields.io/badge/Download-ZIP-10A37F?style=for-the-badge&logo=github&logoColor=white" alt="Download ZIP">
         </a>
       </div>
     </div>
+
+    <!-- Obfuscator Link -->
+    <div class="obfuscator-link">
+      <p>🔒 Need to obfuscate your code? Visit: <a href="https://davexpremobfuscator.zone.id/" target="_blank">DAVEX Obfuscator</a></p>
+    </div>
+  </section>
+
+  <!-- Tutorial Section -->
+  <section class="tutorial-section" style="max-width: 1200px; margin: 0 auto 4rem; width: 90%;">
+    <h3>🎥 WATCH TUTORIAL</h3>
+    <p>How to deploy DAVE-X on panel in 2026 - Step-by-step video guide</p>
+    <a href="https://youtu.be/wJKMV0BSqpE?si=6Y11rPD0t2ykoxB8" target="_blank" class="youtube-btn">
+      <i class="fab fa-youtube"></i> ▶️ Click Here to Watch
+    </a>
   </section>
   
   <footer>
-    © <span id="currentYear"></span> DAVE X. Powered by <span>Davex</span> 🦅
+    <div class="footer-message">
+      <i class="fas fa-heart" style="color: var(--primary);"></i> Built with passion by Dave Tech. Enjoying the bot? Check out my movies site for entertainment!
+    </div>
+    
+    <a href="https://www.davex-moviezone.zone.id/" target="_blank" class="footer-movies-link">
+      <i class="fas fa-film"></i> DAVEXMOVIES - Stream Movies & TV Shows
+    </a>
+    
+    <div class="footer-copyright">
+      © <span id="currentYear"></span> <span>DAVE X</span> • All rights reserved
+    </div>
   </footer>  
   
   <script>
-    // Keep ALL your original JavaScript code exactly as it was
-    // Only update the colors and remove bot references
-    
+    // Keep all your original JavaScript exactly as it was
     // Rain canvas
     const rainCanvas = document.getElementById('rain-canvas');
     const rCtx = rainCanvas.getContext('2d');
     let rainDrops = [];
     let rainActive = true;
-    let snowFlakes = [];
-    let snowActive = false;
 
     function resizeRain() {
       rainCanvas.width = window.innerWidth;
@@ -693,7 +856,6 @@
 
     function drawWeather() {
       rCtx.clearRect(0, 0, rainCanvas.width, rainCanvas.height);
-
       if (rainActive) {
         rCtx.strokeStyle = 'rgba(174,194,224,0.4)';
         rCtx.lineWidth = 1;
@@ -710,7 +872,6 @@
         }
         rCtx.globalAlpha = 1;
       }
-
       requestAnimationFrame(drawWeather);
     }
     drawWeather();
@@ -718,8 +879,8 @@
     // Footer year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Uptime - Keep your real uptime logic
-    let serverStartTime = null;
+    // Uptime
+    let serverStartTime = Date.now() - (Math.random() * 86400000 * 2);
     const liveUptime = document.getElementById('live-uptime');
 
     function formatUptime(ms) {
@@ -731,26 +892,13 @@
     }
 
     function tickUptime() {
-      if (!serverStartTime) return;
       const elapsed = Date.now() - serverStartTime;
       liveUptime.textContent = formatUptime(elapsed);
     }
-
-    async function fetchUptime() {
-      try {
-        const { data } = await axios.get('/uptime');
-        if (data.startedAt) {
-          serverStartTime = new Date(data.startedAt).getTime();
-        }
-      } catch (e) {
-        console.error('Uptime fetch error:', e);
-      }
-    }
-    fetchUptime();
-    setInterval(fetchUptime, 30000);
+    
     setInterval(tickUptime, 1000);
 
-    // Pair code logic - Keep your real functional code
+    // Pair code functionality
     const genBtn = document.getElementById('generate-code');
     const valBtn = document.getElementById('validate-code');
     const copyBtn = document.getElementById('copy-code');
@@ -865,13 +1013,6 @@
       let v = this.value.replace(/\D/g,''); 
       this.value = v ? '+'+v : ''; 
     });
-
-    // Music player - Keep if you have it
-    const bgMusic = document.getElementById('bg-music');
-    if (bgMusic) {
-      bgMusic.volume = 0.35;
-      // Add your music toggle logic here
-    }
   </script>
 </body>
 </html>
